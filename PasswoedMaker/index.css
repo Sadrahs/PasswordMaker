@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    background-color: #0C4A6E;
+    
+}
+
+h1{
+    margin-bottom: 0px
+}
+
+#card{
+    margin: 20px auto;
+    width: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.green{
+    color: #10B981;
+}
+
+button{
+    background-color: #34D399;
+    padding: 10px 20px;
+    border: hidden;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#passBox{
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    
+}
+.box{
+    background-color: #0284C7;
+    width: 160px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    min-height: 40px;
+    box-sizing: border-box;
+    word-break: break-all;
+    color: #10FF81
+;
+}
+
