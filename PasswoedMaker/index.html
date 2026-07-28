@@ -1,17 +1,43 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Maker</title>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div id = "card">
-            <h1>Generate a <span class="green"> random password </span></h1>
+        <div id="card">
+            <h1>Generate a <span class="green">random password</span></h1>
             <h4>Never use an insecure password again.</h4>
-            <button onclick="makePass()">Generate password</button>
-            <hr style="border: none; height: 2px; background-color: white; width: 100%; margin: 20px 10px; ">
 
-            <div id ="passBox">
-                <p class = "box" id = "box1"> </p>
-                <p class = "box" id = "box2"> </p>
+            <div id="options">
+                <div class="option-row">
+                    <label for="length">Length: <span id="lengthValue">16</span></label>
+                    <input type="range" id="length" min="8" max="32" value="16">
+                </div>
+
+                <div class="checkbox-row">
+                    <label><input type="checkbox" id="uppercase" checked> A-Z</label>
+                    <label><input type="checkbox" id="lowercase" checked> a-z</label>
+                    <label><input type="checkbox" id="numbers" checked> 0-9</label>
+                    <label><input type="checkbox" id="symbols" checked> !@#$</label>
+                </div>
+            </div>
+
+            <button id="generateBtn">Generate password</button>
+            <p id="errorMsg" role="alert"></p>
+
+            <hr style="border: none; height: 2px; background-color: white; width: 100%; margin: 20px 10px;">
+
+            <div id="passBox" aria-live="polite">
+                <div class="box-wrap">
+                    <p class="box" id="box1"></p>
+                    <button class="copyBtn" data-target="box1" aria-label="Copy first password">Copy</button>
+                </div>
+                <div class="box-wrap">
+                    <p class="box" id="box2"></p>
+                    <button class="copyBtn" data-target="box2" aria-label="Copy second password">Copy</button>
+                </div>
             </div>
         </div>
 
